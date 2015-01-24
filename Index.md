@@ -33,6 +33,9 @@ where $\Psi_i$ and $\alpha_i(t)$ are random variables and $P_T  + K$ is constant
 In predefined room of size 10x20 (meters) one can choose ones (receiver) position (black dot in user interface) and choose how many beacons are present.
 
 
+```
+## Loading required package: MASS
+```
 
 ![plot of chunk block2](assets/fig/block2-1.png) 
 
@@ -42,10 +45,15 @@ According to choices, application reactively simulates strength of signal that w
 
 ## What is simulated and what is estimated ?
 
-Becouse of randomness the computation of localization is biased. One can also use many algorithms to estimate this position - application uses simulated signal strength to recalulate distances from beacons and estimate the position using min-max method, as explained in work of [Langendoen and Reijers]("http://www.consensus.tudelft.nl/documents_papers/compnw.pdf")
+Becouse of randomness in the signal strength the computation of localization based on signals is biased. One can also use many algorithms to estimate this position - application uses simulated signal strength to recalulate distances from beacons and estimate the position using min-max method, as explained in work of [Langendoen and Reijers]("http://www.consensus.tudelft.nl/documents_papers/compnw.pdf")
 
-## Have fun!
+--- .class #id 
 
+## Why it is fun ?
 
-Change the position of receiver, change the number of beacons in the room and see how the strength of signal changes (barplot), together with your position ! :)
+It is not! :) By changing the position of receiver and the number of beacons in the room you can see how much the strength of signal changes (barplot), together with your position and find  out how much randomness in the signal influences estimation of your position.
+
+So it is not fun at all to see that some extra work with filtering the signals is needed to achieve some precision, but you can still enjoy moving the dot! :)
+
+*Thank you!*
 
